@@ -22,3 +22,4 @@ if "Quentin" in prenoms:
 ma_liste = [1, 5, 2, 4, 5, 5]
 valeurs_uniques = set(ma_liste)
 print(valeurs_uniques)
+

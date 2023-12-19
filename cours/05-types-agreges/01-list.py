@@ -65,13 +65,12 @@ print(nombres)
 fruits.sort(reverse=True)
 print(fruits)
 
-
 a = [1, 2, 3]
 b = a
 b.append(50)
 print(id(a), id(b))
 
-
 import copy
+
 b = copy.deepcopy(a)
 print(id(a), id(b))
