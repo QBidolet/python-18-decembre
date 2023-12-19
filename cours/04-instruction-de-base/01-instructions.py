@@ -14,3 +14,26 @@ i = 0
 while i < 6:
     print(i)
     i += 1
+
+print("#" * 25)
+# for avec range
+# for(int i=0; i<5; i++)
+# range(end)
+for i in range(6):
+    print(i)
+
+print("#" * 25)
+# range(start, end, step)
+for i in range(3, 30, 3):
+    print(i)
+
+print("#" * 25)
+# break et continue
+i = 0
+while i < 6:
+    if i == 2:
+        # break
+        i += 1
+        continue
+    print(i)
+    i += 1
