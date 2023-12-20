@@ -22,4 +22,36 @@ d) Autre
 
 Score : 1/3
 """
+# Etape 1 : Initialisation des variables
+question_1 = """
+Q1. Un set peut il contenir des valeurs dupliquées ?
+a) Vraie
+b) Fausse
+c) Partiellement vraie
+d) Autre
+"""
 
+question_2 = "Comment ... ?"
+
+questions = {
+    question_1: "a",
+    question_2: "b"
+}
+
+# Etape 2 : Déroulement du QCM.
+score = 0
+print("Bienvenue dans le QCM.")
+for question, valeur in questions.items():
+    print(question)
+    # Obtenir la réponse utilisateur
+    user_input = input("Tapez votre réponse (a/b/c/d).\n")
+    # Vérifier si la réponse correspond à la valeur de la question
+    if user_input == valeur:
+        print("Bonne réponse !")
+        # Si la réponse est bonne, incrémenter le score.
+        score += 1
+    else:
+        print("Mauvaise réponse !")
+
+# Etape 3 : Affichage du score
+print(f"Votre score: {score}/{len(questions)}")

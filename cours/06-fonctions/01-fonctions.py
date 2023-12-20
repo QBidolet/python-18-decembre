@@ -63,14 +63,14 @@ def menu(**kwargs):
 
 menu(entree="Salade", plat_poisson="Huitre", plat_viande="Dinde", dessert="Bûche")
 
+
 # fonctions génératrices
-
-
 def range_2(n):
     compteur = 0
     while compteur < n:
         yield compteur
         compteur += 1
+
 
 resultat = range_2(6)
 
@@ -87,3 +87,28 @@ print(type(resultat))
 
 for i in range_2(6):
     print(i)
+
+# Fonctions anonymes
+print('#' * 25)
+
+
+def double(nombre):
+    return nombre * 2
+
+
+liste = [1, 2, 3, 4]
+# nouvelle_liste = []
+# for nombre in liste:
+#     nouvelle_liste.append(double(nombre))
+# print(nouvelle_liste)
+
+# mon_map = map(double, liste)
+# print(list(mon_map))
+
+# map : va appliquer une transformation à une fonction et sauvegarder le résultat.
+mon_map = map(lambda x: x * 2, liste)
+print(list(mon_map))
+
+# filter : permet de filtrer une liste sur une condition
+mon_filter = filter(lambda x: x % 2 == 0, liste)
+print(list(mon_filter))
