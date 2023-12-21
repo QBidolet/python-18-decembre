@@ -3,7 +3,7 @@
 le nom d'un mois et le programme retourne le nombre de jour de ce mois.
 
 BONUS :
-Donner la posibilité à l'utilisateur de saisir un mois en français également.
+Donner la possibilité à l'utilisateur de saisir un mois en français également.
 """
 
 # Un dictionnaire d'association nom de mois / jour
@@ -22,7 +22,7 @@ months = {
     "december": 31
 }
 # Un second dictionnaire d'association des noms de mois français / anglais
-frTranslator = {
+fr_translator = {
     "janvier": "january",
     "février": "february",
     "mars": "march",
@@ -36,3 +36,25 @@ frTranslator = {
     "novembre": "november",
     "décembre": "december"
 }
+
+
+def traduire_mois_francais_vers_anglais(mois):
+    if mois in fr_translator:
+        mois = fr_translator[mois]
+    return mois
+
+def obtenir_nombre_jour_par_mois(mois):
+    nombre_jour = 0
+    if mois in months.keys():
+        nombre_jour = months[mois]
+    return nombre_jour
+
+mois_input = input("Entrez le mois en anglais ou en français.\n").lower()
+mois_input = traduire_mois_francais_vers_anglais(mois_input)
+nombre_jour = obtenir_nombre_jour_par_mois(mois_input)
+
+if nombre_jour:
+    print(f"Le mois {mois_input} a {nombre_jour} jours.")
+else:
+    print(f"Le mois {mois_input} n'existe pas en français ni en anglais.")
+

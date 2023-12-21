@@ -11,3 +11,10 @@ Exemple :
 20 x 7 = 140
 """
 
+
+def generer_table_multiplication(table, nombre_terme):
+    for i in range(1, nombre_terme + 1):
+        resultat = i * table
+        print(f"{i} x {table} = {resultat}")
+
+generer_table_multiplication(10, 30)
