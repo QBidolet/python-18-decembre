@@ -3,9 +3,14 @@ class Voiture:
         self.couleur = couleur
         self.marque = marque
 
+    def klaxonner(self):
+        print("tut tut")
 
-voiture = Voiture("Rouge", "Tesla")
-print(voiture.couleur, voiture.marque)
+    def repeindre(self, couleur):
+        self.couleur = couleur
 
-mercedes = Voiture("Noire", "Mercedes")
-print(mercedes.marque)
+    def __str__(self):
+        return f"Voiture : {self.marque} de couleur {self.couleur}."
+
+    def __eq__(self, other):
+        return self.marque == other.marque and self.couleur == other.couleur
