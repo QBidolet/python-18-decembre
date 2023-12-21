@@ -1,0 +1,23 @@
+Pour créer un projet Python :
+    - Créer un dossier vide
+    - Créer la venv pour le projet :
+        File > Settings > Project > Python Interpreter
+        > Add New > Vérifier le répertoire et la version de Python > OK
+    - Ouvrir un terminal et constater que la venv est bien configuré
+    par la présence de (venv) au début de ligne.
+    - créer un main.py
+    - créer vos packages (avec __init__.py)
+    - créer vos modules
+
+Pour créer un .exe :
+    - Installer le package PyInstaller :
+            avec pip : pip install pyinstaller
+            sans pip : on télécharge le fichier sur pypi
+                        on installe avec : python setup.py install chemin/vers/le/fichier
+    - Créer le .exe
+        pyinstaller --onefile main.py
+
+
+Gestion des dépendances :
+- pip freeze > requirements.txt
+- pip install -r requirements.txt

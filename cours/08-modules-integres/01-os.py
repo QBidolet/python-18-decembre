@@ -3,7 +3,7 @@ import os
 print('#' * 50)
 # A éviter : chemin absolu.
 # Dépendant de la machine.
-chemin = "C:\\users\\Quentin\\mon-projet\\main.py"
+chemin = "C:\\users\\Quentin\\mon-projet\\fenetre.py"
 
 # A faire : os.path.join
 chemin = os.path.join(os.getcwd(), "mon_dossier")
